@@ -14,10 +14,18 @@
  *= require_self
  */
 
+@import 'normalize';
+
 body {
   font-family: 'VT323', monospace;
   font-size: 1.5em;
   color: #444;
+  background-color: darkblue;
+}
+
+#main-background {
+  background-color: white;
+  padding: 0.1em 2em;
 }
 
 h1, h2 {
@@ -31,7 +39,7 @@ h3 {
 }
 
 a {
-  color: blue;
+  color: darkblue;
 }
 
 .container {
@@ -47,7 +55,7 @@ a {
 .post-date {
   position: relative;
   left: 1em;
-  bottom: 0.5em;
+  bottom: 0.9em;
 }
 
 .error {

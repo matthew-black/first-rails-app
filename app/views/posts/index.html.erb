@@ -1,8 +1,8 @@
 
-<h2>Some Blog Posts:</h2>
+<h2>Some Blog Posts, From, Like, 1998:</h2>
 <% @posts.each do |post| %>
   <div class="index-post">
     <h3><%= link_to post.title, post_path(post) %></h3>
-    <p class="post-date"><em>Posted: <%= long_form_date(post.created_at) %> at <%= long_form_time(post.created_at) %></em></p>
+    <p class="post-date"><em>Posted: <%= long_form_date(post.created_at - 19.years) %></em></p>
   </div>
 <% end %>
