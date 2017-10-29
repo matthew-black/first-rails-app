@@ -9,14 +9,16 @@
   </head>
 
   <body class="container">
-    <h1>Matt's Highly Stylized Blog!</h1>
-    <%= image_tag "computer.png" %>
-    <nav>
-      <ul>
-        <li><%= link_to "home", root_path %></li>
-        <li><%= link_to "new post", new_post_path %></li>
-      </ul>
-    </nav>
+    <div id="main-background">
+      <h1>Matt's Blog in 1998!</h1>
+      <span><%= image_tag "computer.png" %></span>
+      <nav>
+        <ul>
+          <li><%= link_to "home", root_path %></li>
+          <li><%= link_to "new post", new_post_path %></li>
+        </ul>
+      </nav>
     <%= yield %>
+    </div>
   </body>
 </html>
