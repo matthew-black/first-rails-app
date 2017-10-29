@@ -1,16 +1,23 @@
-<h2>New post.</h3>
+<h3>New post:</h3>
 
-<p><%= "#{session[:puppy]}" %></p>
+<% if @errors %>
+  <ul>
+  <% @errors.each do |error| %>
+    <li class="error"><%= error %></li>
+  <% end %>
+    <li class="error">Don't be so silly</li>
+</ul>
+<% end %>
 
 <%= form_for :post, url: posts_path do |f| %>
 
   <p>
-    <%= f.label :title %>:
+    <%= f.label :title %>
     <%= f.text_field :title%>
   </p>
 
   <p>
-    <%= f.label :content %>:<br>
+    <%= f.label :content %><br>
     <%= f.text_area :content, :cols => 40, :rows => 20 %>
   </p>
 

@@ -3,12 +3,20 @@
   <head>
     <title>Blog</title>
     <%= csrf_meta_tags %>
-
+    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
   </head>
 
-  <body>
+  <body class="container">
+    <h1>Matt's Highly Stylized Blog!</h1>
+    <%= image_tag "computer.png" %>
+    <nav>
+      <ul>
+        <li><%= link_to "home", root_path %></li>
+        <li><%= link_to "new post", new_post_path %></li>
+      </ul>
+    </nav>
     <%= yield %>
   </body>
 </html>

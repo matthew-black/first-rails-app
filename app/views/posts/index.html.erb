@@ -1,6 +1,8 @@
-<p><%= link_to "new post", new_post_path %></p>
 
+<h2>Some Blog Posts:</h2>
 <% @posts.each do |post| %>
-  <h2><%= link_to post.title, post_path(post) %></h2>
-  <p><em>Posted: <%= long_form_date(post.created_at) %> at <%= long_form_time(post.created_at) %></em></p>
+  <div class="index-post">
+    <h3><%= link_to post.title, post_path(post) %></h3>
+    <p class="post-date"><em>Posted: <%= long_form_date(post.created_at) %> at <%= long_form_time(post.created_at) %></em></p>
+  </div>
 <% end %>
