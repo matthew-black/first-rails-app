@@ -1,27 +1,6 @@
 <div>
-<h3>New post:</h3>
+<h3>New Post:</h3>
 
-<% if @errors %>
-  <ul>
-  <% @errors.each do |error| %>
-    <li class="error"><%= error %></li>
-  <% end %>
-    <li class="error">Don't be so silly</li>
-</ul>
-<% end %>
-
-<%= form_for :post, url: posts_path do |f| %>
-
-  <p>
-    <%= f.label :title %>:<br>
-    <%= f.text_field :title%> <%= f.submit %>
-  </p>
-
-  <p>
-    <%= f.label :content %>:<br>
-    <%= f.text_area :content, :cols => 40, :rows => 20 %>
-  </p>
-
-<% end %>
+<%= render 'form' %>
 </div>
 

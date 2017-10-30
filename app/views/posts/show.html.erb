@@ -1,6 +1,7 @@
 <h3><%= @post.title %></h3>
 
-<p><%= @post.content %></p>
+<p class="content"><%= @post.content %></p>
 
 <p><em>Submitted <%= time_ago_in_words(@post.created_at - 19.years) %> ago.</em></p>
 <p><%= link_to "edit", edit_post_path(@post) %></p>
+<p><%= link_to "delete", post_path(@post), method: :delete, data: { confirm: "Are you for real?"} %></p>
