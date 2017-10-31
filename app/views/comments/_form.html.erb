@@ -1,0 +1,11 @@
+<h3>Write Your Comment:</h3>
+
+<%= form_for([@post, @post.comments.build]) do |f| %>
+  <p>
+    <%= f.text_area :comment_text, :cols => 40, :rows => 5 %>
+  </p>
+  <p>
+    <%= f.submit("Post Comment") %>
+  </p>
+
+<% end %>
