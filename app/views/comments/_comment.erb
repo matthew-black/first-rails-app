@@ -1,0 +1,4 @@
+<div class="comment">
+  <p><%= comment.comment_text %></p>
+  <p class="comment-byline"><em>from <%= comment.user.username %>, <%= time_ago_in_words(comment.created_at - 19.years) %> ago.</em></p>
+</div>
