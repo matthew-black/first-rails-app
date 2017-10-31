@@ -4,14 +4,14 @@
 
 <p><em>submitted <%= time_ago_in_words(@post.created_at - 19.years) %> ago.</em></p>
 
-<% if @post.comments.length != 0 %>
+
 <h4>Comments:</h4>
+
 <div id="where-the-comments-live">
 <% @post.comments.each do |comment| %>
   <%= render comment %>
 <% end %>
 </div>
-<% end %>
 
 <% if current_user %>
   <div id="show-comment-form"></div>
