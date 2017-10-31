@@ -6,13 +6,16 @@
 
 <% if @post.comments.length != 0 %>
 <h4>Comments:</h4>
+<div id="where-the-comments-live">
 <% @post.comments.each do |comment| %>
   <%= render comment %>
 <% end %>
+</div>
 <% end %>
 
 <% if current_user %>
-  <p><%= link_to "comment", new_post_comment_path(@post) %></p>
+  <div id="show-comment-form"></div>
+  <p id="comment-form-link"><%= link_to "comment", new_post_comment_path(@post), remote: true %></p>
 <% end %>
 
 <% if is_matt? %>

@@ -10,7 +10,10 @@ class CommentsController < ApplicationController
     @comment = @post.comments.create(comment_params)
     @comment.user_id = current_user.id
     if @comment.save
-      redirect_to @post
+      respond_to do |f|
+        f.html { redirect_to @post }
+        f.js
+      end
     else
       redirect_to '/'
     end
