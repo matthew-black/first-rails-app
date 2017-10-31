@@ -6,9 +6,11 @@
 
 <% if @post.comments.length != 0 %>
 <h4>Comments:</h4>
+<div id="where-the-comments-live">
 <% @post.comments.each do |comment| %>
   <%= render comment %>
 <% end %>
+</div>
 <% end %>
 
 <% if current_user %>
